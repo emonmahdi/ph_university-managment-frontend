@@ -1,0 +1,10 @@
+First Module
+
+1. Create nextjs app
+2. setup and redux-toolkit
+3. install and setup ant design
+4. Different way make sidebar and content 
+5. Dynamic menu items
+6. Form and FormInput reusable component create
+6. breadCrumb reusable component create
+7. Google Fonts add. 
