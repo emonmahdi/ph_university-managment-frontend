@@ -1,28 +1,27 @@
 "use client";
 
-import { Layout, Breadcrumb, theme } from "antd";
+import { Layout, theme } from "antd";
+import UMBreadCrumb from "./UMBreadCrumb";
 
 const { Content } = Layout;
 
 const Contents = ({ children }: { children: React.ReactNode }) => {
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
+  const base = "admin";
   return (
     <Content style={{ margin: "0 16px" }}>
-      <Breadcrumb style={{ margin: "16px 0" }}>
-        <Breadcrumb.Item>User</Breadcrumb.Item>
-        <Breadcrumb.Item>Bill</Breadcrumb.Item>
-      </Breadcrumb>
-      <div
-        style={{
-          padding: 24,
-          minHeight: 360,
-          background: colorBgContainer,
-          borderRadius: borderRadiusLG,
-          color: "black",
-        }}
-      >
+      <div>
+        <UMBreadCrumb
+          items={[
+            {
+              label: `${base}`,
+              link: `/${base}`,
+            },
+            {
+              label: "student",
+              link: `/${base}/student`,
+            },
+          ]}
+        />
         {children}
       </div>
     </Content>
